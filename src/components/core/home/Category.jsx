@@ -14,7 +14,7 @@ const Category = ({categories}) => {
                             <img className=' object-' src={item[1][0].thumbnail} />
                         </div>
                         <p>Category</p>
-                        <h5>{item[0]}</h5>
+                        <h5 className=' capitalize font-bold text-lg'>{item[0]}</h5>
                     </Link>
                 ))
             }

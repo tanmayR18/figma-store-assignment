@@ -5,16 +5,19 @@ import Category from "./pages/Category"
 import Product from "./pages/Product"
 import NotFound from "./pages/NotFound"
 import { Routes, Route} from "react-router-dom"
+import {data} from "./data"
+
 
 function App() {
+    const categories = data.products[0]
   return (
-    <div className=" min-h-screen w-screen">
+    <div className="">
         <Navbar />
 
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/categories/:category" element={<Category />} />
-            <Route path="/product" element={<Product />} />
+            <Route path="/" element={<Home categories={categories} />} />
+            <Route path="/categories/:category" element={<Category categories={categories} />} />
+            <Route path="/product/:productId" element={<Product categories={categories} />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
 
