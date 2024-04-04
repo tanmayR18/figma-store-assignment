@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
+
 import { IoSearchSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { TfiLocationPin } from "react-icons/tfi";
-import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
 
 const Navbar = () => {
 
@@ -26,8 +28,10 @@ const Navbar = () => {
         if( scrolling || showDropDown ) setShowDropDown(false)
 
         window.addEventListener("scroll", onScroll);
+
         return () => window.removeEventListener("scroll", onScroll);
-    }, [scrollTop]);
+
+    }, [scrollTop, showDropDown, scrolling]);
     
   return (
     <nav className={`fixed z-50 w-full duration-300 ${scrolling ? "" : " -translate-y-[100%]"}  ${scrollTop <= 0 ? " border-transparent" : "bg-white"}
@@ -43,11 +47,11 @@ const Navbar = () => {
                     Shop
                 </a>
 
-                <a 
-                className='hidden lg:block font-bold border-2 border-black px-6 py-2 rounded-3xl duration-300 hover:bg-black hover:text-white'
+                <button 
+                className='hidden lg:block cursor-pointer font-bold border-2 border-black px-6 py-2 rounded-3xl duration-300 hover:bg-black hover:text-white'
                 href='#'>
                     About
-                </a>
+                </button>
 
                 {/* Hamburgur for mobile view */}
                 <div 
@@ -86,12 +90,6 @@ const Navbar = () => {
                             <Link className=' hover:underline' to={"#"}>Contact Us</Link>
                         </div>
 
-                        {/* <Link 
-                        className=' border-b p-2'
-                        onClick={() => setShowDropDown(false)}
-                        to={"/#cart"}>
-                            Cart
-                        </Link> */}
                     </div>
                 </div>
 

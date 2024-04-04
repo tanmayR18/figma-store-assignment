@@ -3,6 +3,7 @@ import FooterSvg from './FooterSvg';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    
     const colors = ["rgb(242,78,30)", "rgb(15,169,88)", "rgb(199,185,255)", "rgb(255,199,0)"];
     const randomColorIndex = Math.floor(Math.random() * colors.length);
     const bgColor = colors[randomColorIndex]; 

@@ -4,7 +4,6 @@ const FooterSvg = () => {
     const randomNumber = Math.floor(Math.random() * 8) + 1
   return (
     <div>
-
             {
                 randomNumber === 1 && 
                 <svg className="svg-logo" width="250" height="273" viewBox="0 0 250 273" fill="none" xmlns="http://www.w3.org/2000/svg">

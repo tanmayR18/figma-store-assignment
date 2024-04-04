@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 // import required modules
-import { FreeMode, Pagination} from 'swiper/modules';
+import { FreeMode } from 'swiper/modules';
 
 
 const Product = ({categories}) => {
@@ -53,7 +53,7 @@ const Product = ({categories}) => {
                         product.images.map( (item, index) => (
                             <SwiperSlide key={index}>
                                 <div>
-                                    <img className=' rounded-3xl' src={item} />
+                                    <img alt='something'  className=' rounded-3xl' src={item} />
                                 </div>
                             </SwiperSlide>
                         )) 
@@ -68,7 +68,7 @@ const Product = ({categories}) => {
                 {
                     product.images.map( (item, index) => (
                         <div className={`h-20 w-20 cursor-pointer rounded-2xl overflow-hidden ${image === index ? "border-2 border-black" : ""}`} onClick={() => setImage(index)} key={index}>
-                            <img className=' w-full h-full object-cover' src={item} />
+                            <img alt='product' className=' w-full h-full object-cover' src={item} />
                         </div>
                     ))
                 }
@@ -76,7 +76,7 @@ const Product = ({categories}) => {
 
            <div className=' w-[40%] hidden lg:block'>
             <div className=' rounded-[4rem] overflow-hidden '>
-                    <img className=' object-cover ' src={product.images[image]} />
+                    <img alt=' product' className=' object-cover ' src={product.images[image]} />
                 </div>
            </div>
 
