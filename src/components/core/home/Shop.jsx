@@ -17,7 +17,7 @@ const Shop = () => {
             //     </button>
             // </div> 
     
-        <div className='relative md:h-full md:bg-contain bg-center md:bg-[url(https://store.figma.com/cdn/shop/files/desktop_2400x.png?v=1702333702)] bg-no-repeat'>
+        <div id='shop' className='relative md:h-full md:bg-contain bg-center md:bg-[url(https://store.figma.com/cdn/shop/files/desktop_2400x.png?v=1702333702)] bg-no-repeat'>
             <div className=' md:hidden'>
                 <img className=' object-cover w-full h-full' src='https://store.figma.com/cdn/shop/files/mobile_200x.png?v=1702333716' />
                 
