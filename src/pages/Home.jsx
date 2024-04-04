@@ -6,8 +6,8 @@ import Category from '../components/core/home/Category'
 const Home = ({categories}) => {
     
   return (
-    <div className=' pt-20'>
-        <Carousel/>
+    <div className=''>
+        <Carousel categories={categories}/>
         <Shop/>
         <Category categories={categories}/>
     </div>

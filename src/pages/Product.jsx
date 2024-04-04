@@ -6,16 +6,13 @@ const Product = ({categories}) => {
     const {productId} = useParams()
     const [image, setImage] = useState(0)
     let product;
-    const length = Object.entries(categories).length
+    const productArray = []
 
-    for (let i = 0 ; i<length;i++){
-        const foundItem = Object.entries(categories)[i][1].find(item=> item.id === parseInt(productId));
-        if(foundItem !== undefined){
-            console.log(foundItem);
-            product = foundItem
-        }
+    for( let key in categories){
+        productArray.push(...categories[key])
     }
-
+    product = productArray.find( item => item.id === parseInt(productId))
+    
 
   return (
     <div className=' py-20'>

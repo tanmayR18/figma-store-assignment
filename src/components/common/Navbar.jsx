@@ -30,7 +30,7 @@ const Navbar = () => {
     }, [scrollTop]);
     
   return (
-    <nav className={`fixed z-50 w-full duration-300 ${scrolling ? "" : " -translate-y-[100%]"}  ${scrollTop <= 0 ? "bg-[#ffc700]" : "bg-white"}
+    <nav className={`fixed z-50 w-full duration-300 ${scrolling ? "" : " -translate-y-[100%]"}  ${scrollTop <= 0 ? " border-transparent" : "bg-white"}
      sm:py-2 lg:p-3
 
     `}>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
                 {/* Hamburgur for mobile view */}
                 <div 
-                className='flex lg:hidden cursor-pointer border-2 border-black rounded-full p-2'>
+                className='flex lg:hidden cursor-pointer border-2 border-black rounded-full p-1 sm:p-2'>
                     
                     <GiHamburgerMenu
                     className={`${showDropDown && "hidden"}`}
@@ -102,7 +102,7 @@ const Navbar = () => {
             </div>
 
             <Link
-            to={"/"} className=' tracking-wide font-bold text-lg sm:text-2xl'>
+            to={"/"} className=' font-bold sm:text-lg md::text-2xl'>
                 THE FIGMA STORE
             </Link>
 
@@ -127,7 +127,7 @@ const Navbar = () => {
                     Cart 1
                 </div>
 
-                <div className='blocl md:hidden font-bold border-2 border-black px-6 py-2 rounded-3xl duration-300 hover:bg-black hover:text-white cursor-pointer'> 
+                <div className='blocl md:hidden font-bold border-2 border-black px-2 sm:px-3 sm:py-1 rounded-3xl duration-300 hover:bg-black hover:text-white cursor-pointer'> 
                     1
                 </div>
             </div>
