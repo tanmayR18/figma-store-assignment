@@ -18,11 +18,11 @@ const Product = ({categories}) => {
 
 
   return (
-    <div className=' pt-20'>
-        <div className=' w-10/12 mx-auto flex justify-evenly  gap-5'>
+    <div className=' py-20'>
+        <div className=' lg:w-10/12 mx-auto flex justify-evenly  gap-5'>
             
 
-            <div className=' flex flex-col gap-5'>
+            <div className=' flex-col gap-5 hidden lg:flex'>
                 {
                     product.images.map( (item, index) => (
                         <div className={`h-20 w-20 cursor-pointer rounded-2xl overflow-hidden ${image === index ? "border-2 border-black" : ""}`} onClick={() => setImage(index)} key={index}>
@@ -32,17 +32,22 @@ const Product = ({categories}) => {
                 }
             </div>
 
-           <div className=' w-[40%]'>
+           <div className=' w-[40%] hidden lg:block'>
             <div className=' rounded-[4rem] overflow-hidden '>
                     <img className=' object-cover ' src={product.images[image]} />
                 </div>
            </div>
 
+
+           {/* <div>
+                Slider
+           </div> */}
+
             {/* Form */}
-            <div className='w-[40%]'>
+            <div className='lg:w-[40%] p-5 md:p-10 lg:p-0'>
                 <div className='flex flex-col gap-4'>
                     <p className=' font-bold bg-green-600 w-fit px-4 rounded-2xl py-1'>{product.category} </p>
-                    <h1 className=' text-[2.5rem] font-bold'>{product.title}</h1>
+                    <h1 className=' text-2xl lg:text-[2.5rem] font-bold'>{product.title}</h1>
                     <h3 className=' font-semibold italic'>{product.description}</h3>
                     <div className=' flex gap-4'>
                         <p className=' bg-yellow-300 text-red-400 w-fit px-2 py-1 font-semibold rounded-lg'>Rs.{product.price}</p>

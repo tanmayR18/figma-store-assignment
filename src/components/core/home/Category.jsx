@@ -5,8 +5,11 @@ const Category = ({categories}) => {
     const list = Object.entries(categories)
     console.log()
   return (
-    <div>
-        <div className=' w-3/4 mx-auto grid grid-cols-3 gap-x-10 '>
+    <div className='py-10 flex flex-col gap-5'>
+        <div className=' text-center font-bold text-3xl'>
+            CATEGORIES
+        </div>
+        <div className=' w-3/4 mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 '>
             {
                 list.map( (item,index) => (
                     <Link to={`/categories/${item[0]}`}  key={index}>

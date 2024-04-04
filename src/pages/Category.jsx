@@ -31,8 +31,11 @@ const Category = ({categories}) => {
 
 
   return (
-    <div className=' pt-20'>
-        <div className=' grid grid-cols-4 w-3/4 mx-auto gap-x-10'>
+    <div className=' py-20 min-h-screen flex flex-col gap-5 w-10/12 mx-auto'>
+        <h1 className=' font-bold text-2xl '>
+            Category: <span className=' italic'>{category}</span>
+        </h1>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-10'>
             {
                 selectedCategory.map( item => (
                     // <Link to={`/product/${category}/${getUrl(item.title)}`} className='' key={item.id}>
