@@ -18,7 +18,7 @@ const Product = ({categories}) => {
 
 
   return (
-    <div className=''>
+    <div className=' pt-20'>
         <div className=' w-10/12 mx-auto flex justify-evenly  gap-5'>
             
 

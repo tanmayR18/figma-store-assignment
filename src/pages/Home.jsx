@@ -6,7 +6,7 @@ import Category from '../components/core/home/Category'
 const Home = ({categories}) => {
     
   return (
-    <div>
+    <div className=' pt-20'>
         <Carousel/>
         <Shop/>
         <Category categories={categories}/>

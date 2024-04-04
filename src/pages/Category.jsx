@@ -31,7 +31,7 @@ const Category = ({categories}) => {
 
 
   return (
-    <div>
+    <div className=' pt-20'>
         <div className=' grid grid-cols-4 w-3/4 mx-auto gap-x-10'>
             {
                 selectedCategory.map( item => (
