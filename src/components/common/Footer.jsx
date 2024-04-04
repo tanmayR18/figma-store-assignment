@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div style={{backgroundColor: bgColor}}>
             <div className=' flex flex-col md:flex-row items-center md:items-start justify-between w-full md:w-10/12 mx-auto 
-             py-20 px-5 md:px-0
+             py-20 px-5 md:px-0 gap-y-10
             '>
                 <div className=' flex'>
                     <FooterSvg />
