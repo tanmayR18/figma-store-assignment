@@ -17,7 +17,7 @@ const Shop = () => {
             //     </button>
             // </div> 
     
-        <div id='shop' className='relative md:h-full md:bg-contain bg-center  bg-no-repeat flex flex-col gap-10 py-20 lg:py-10 lg:pt-32 '>
+        <div id='shop' className='relative md:h-full md:bg-contain bg-center  bg-no-repeat flex flex-col gap-10 pt-20  lg:py-10 lg:pt-32 '>
 
 
             <div className='p-2 text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] group font-bold text-center md:w-10/12 mx-auto flex items-center justify-center flex-wrap gap-x-5 lg:gap-y-2'>

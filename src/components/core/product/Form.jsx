@@ -108,7 +108,7 @@ const Form = ({product}) => {
         {/* Quantity counter */}
         <div className=' flex justify-center items-center gap-5'>
             <div 
-            className=' hover:bg-black hover:text-white duration-300 p-4 border-2 border-black cursor-pointer  rounded-full'
+            className=' hover:bg-black hover:text-white duration-300 p-2 md:p-4 border-2 border-black cursor-pointer  rounded-full'
             onClick={decreaseQuantity}>
                 <FaMinus />
             </div>
@@ -116,14 +116,14 @@ const Form = ({product}) => {
                 {quantity}
             </div>
             <div 
-            className=' hover:bg-black hover:text-white duration-300 p-4 border-2 border-black cursor-pointer  rounded-full'
+            className=' hover:bg-black hover:text-white duration-300 p-2 md:p-4 border-2 border-black cursor-pointer  rounded-full'
             onClick={increaseQuantity} >
                 <FaPlus />
             </div>
         </div>
 
         <button
-        className=' bg-blue-600 py-3 text-white font-bold text-lg rounded-md'
+        className=' bg-blue-600 py-2 md:py-3 text-white font-bold text-lg rounded-md'
         disabled = {quantity*product.quantity > product.stock}
         >
             {

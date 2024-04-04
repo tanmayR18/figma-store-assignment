@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Category = ({categories}) => {
     const list = Object.entries(categories)
-    console.log()
+    
   return (
     <div className='py-10 flex flex-col gap-5'>
         <div className=' text-center font-bold text-3xl'>
