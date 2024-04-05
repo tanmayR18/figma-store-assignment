@@ -31,11 +31,11 @@ const Navbar = () => {
 
         return () => window.removeEventListener("scroll", onScroll);
 
-    }, [scrollTop, showDropDown, scrolling]);
+    }, [scrollTop]);
     
   return (
     <nav className={`fixed z-50 w-full duration-300 ${scrolling ? "" : " -translate-y-[100%]"}  ${scrollTop <= 0 ? " border-transparent" : "bg-white"}
-     sm:py-2 lg:p-3
+    py-2 lg:p-3
 
     `}>
         <div className=' p-2 md:p-0 sm:w-[90%] mx-auto  justify-between items-center flex'>
@@ -60,12 +60,12 @@ const Navbar = () => {
                     <GiHamburgerMenu
                     className={`${showDropDown && "hidden"}`}
                     onClick={() => setShowDropDown( prevState => !prevState)}
-                    size={15} />
+                    size={20} />
 
                     <RxCross2 
                     className={`${!showDropDown && "hidden"}`}
                     onClick={() => setShowDropDown( prevState => !prevState)}
-                    size={15} />
+                    size={20} />
 
 
                     <div className={`absolute left-0 top-14 w-screen h-screen flex flex-col gap-10 p-10 font-bold   bg-white transition-transform duration-300  ${showDropDown ? " scale-y-100" : " scale-y-0 text-white"} origin-top flex flex-col gap-2`}>
@@ -100,7 +100,7 @@ const Navbar = () => {
             </div>
 
             <Link
-            to={"/"} className=' font-bold sm:text-lg md::text-2xl'>
+            to={"/"} className=' font-bold text-lg md:text-2xl'>
                 THE FIGMA STORE
             </Link>
 

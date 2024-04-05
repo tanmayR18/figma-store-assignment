@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .my-input {
-    @apply py-2 px-4 focus:border-none  rounded-xl border border-gray-300
+    @apply py-2 px-4 focus:border-none  rounded-xl border-2 border-gray-300
 }
 
 html{

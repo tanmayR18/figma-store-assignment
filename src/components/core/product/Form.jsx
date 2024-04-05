@@ -16,7 +16,10 @@ const Form = ({product}) => {
     })
 
     const increaseQuantity = () => {
-        if( (quantity+1)*product.quantity > product.stock ) toast.error("Sorry! We don't have that much in stock.") 
+        if( (quantity+1)*product.quantity > product.stock ){
+            toast.error("Sorry! We don't have that much in stock.") 
+            return
+        }
         setQuantity( prevState => prevState + 1)
     }
 
@@ -50,8 +53,17 @@ const Form = ({product}) => {
             return
         }
 
+        if(quantity*product.quantity){
+            console.log(quantity*product.quantity)
+            toast.error("Provide quantiy")
+            return
+        }
+
+        const finalFormData = formData
+        finalFormData.quantity = product.quantity
+
+        console.log(" Form Data",finalFormData)
         toast.success("Order Placed Successfully")
-        console.log(" Form Data",formData)
 
         setFormData({
             firstName:"",
@@ -66,7 +78,7 @@ const Form = ({product}) => {
 
   return (
     <form 
-        className=' border rounded-lg p-4 my-4 flex flex-col gap-4'
+        className=' border-2 border-black rounded-xl p-4 my-4 flex flex-col gap-4'
         onSubmit={handleSubmit}>
 
             <div className=' flex flex-col'>
@@ -123,10 +135,10 @@ const Form = ({product}) => {
 
             <button
             className=' bg-blue-600 py-2 md:py-3 text-white font-bold text-lg rounded-md'
-            disabled = {quantity*product.quantity > product.stock}
+            disabled = {quantity*product.quantity > product.stock || quantity === 0}
             >
                 {
-                    quantity*product.quantity > product.stock ? "Out of stock" : "Order"
+                    quantity*product.quantity > product.stock   ? "Out of stock" : "Order"
                 }
             </button>
         </form>
