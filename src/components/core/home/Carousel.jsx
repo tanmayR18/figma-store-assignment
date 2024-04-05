@@ -18,6 +18,7 @@ const Carousel = ({categories}) => {
    
     const products = []
 
+    // for getting all the products
     for( let key in categories){
         products.push(...categories[key])
     }
@@ -25,6 +26,7 @@ const Carousel = ({categories}) => {
 
     return (
         <div className='bg-[#ffc700] py-8 pt-20  relative'>
+            {/* Hero slider */}
             <Swiper  
                 slidesPerView={1.5}
                 loop={true}
@@ -64,6 +66,7 @@ const Carousel = ({categories}) => {
                 }
             </Swiper>
 
+            {/* High Five animation */}
             <div className=' scale-50 md:scale-75 lg:scale-100 group absolute right-0 lg:right-10 bottom-0 translate-y-1/2 z-40'>
                 <svg className='' width="171" height="171" viewBox="0 0 171 171" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g className="animation--rotate origin-center">

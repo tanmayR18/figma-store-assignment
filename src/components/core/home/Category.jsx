@@ -10,6 +10,7 @@ const Category = ({categories}) => {
             CATEGORIES
         </div>
         
+        {/* Category grid */}
         <div className=' w-3/4 mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 '>
             {
                 list.map( (item,index) => (

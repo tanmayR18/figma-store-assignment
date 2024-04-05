@@ -27,8 +27,9 @@ const Product = ({categories}) => {
 
   return (
     <div className=' py-20'>
-        <div className=' lg:hidden '>
 
+        <div className=' lg:hidden '>
+            {/* For Mobile view */}
             <div className='flex flex-col gap-4  lg:hidden p-2 mb-6'>
                     <p className=' font-bold bg-green-600 w-fit px-4 rounded-2xl py-1'>{product.category} </p>
                     <h1 className=' text-2xl lg:text-[2.5rem] font-bold'>{product.title}</h1>
@@ -63,7 +64,7 @@ const Product = ({categories}) => {
 
         <div className=' lg:w-10/12 mx-auto flex justify-evenly  gap-5'>
             
-
+            {/* products images */}
             <div className=' flex-col gap-5 hidden lg:flex'>
                 {
                     product.images.map( (item, index) => (
@@ -74,6 +75,7 @@ const Product = ({categories}) => {
                 }
             </div>
 
+            {/* Preview image */}
            <div className=' w-[40%] hidden lg:block'>
             <div className=' rounded-[4rem] overflow-hidden '>
                     <img alt=' product' className=' object-cover ' src={product.images[image]} />

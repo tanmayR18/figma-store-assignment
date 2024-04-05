@@ -6,6 +6,7 @@ const Category = ({categories}) => {
     const {category} = useParams()
     let selectedCategory = []
 
+    // get all products from selected categories
     for (let key in categories){
         if(key === category){
             console.log(true, key, category, categories[key])
@@ -15,9 +16,12 @@ const Category = ({categories}) => {
 
   return (
     <div className=' py-20 min-h-screen flex flex-col gap-5 w-10/12 mx-auto'>
+        {/* heading */}
         <h1 className=' font-bold text-2xl '>
             Category: <span className=' italic'>{category}</span>
         </h1>
+
+        {/* Filtered category cards */}
         <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-10'>
             {
                 selectedCategory.map( item => (
