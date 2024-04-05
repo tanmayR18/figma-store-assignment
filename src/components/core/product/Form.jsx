@@ -34,6 +34,9 @@ const Form = ({product}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        // validations
+
         if(formData.firstName === "" 
         || formData.lastName === ""  
         || formData.email === ""   
@@ -123,9 +126,11 @@ const Form = ({product}) => {
                 onClick={decreaseQuantity}>
                     <FaMinus />
                 </div>
+
                 <div className=' font-bold text-lg'>
                     {quantity}
                 </div>
+                
                 <div 
                 className=' hover:bg-black hover:text-white duration-300 p-2 md:p-4 border-2 border-black cursor-pointer  rounded-full'
                 onClick={increaseQuantity} >

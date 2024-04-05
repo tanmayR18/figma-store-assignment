@@ -5,6 +5,7 @@ const Shop = () => {
     return (
     
         <div id='shop' className='relative md:h-full md:bg-contain bg-center  bg-no-repeat flex flex-col gap-10 pt-20  lg:py-10 lg:pt-32 '>
+            {/* Decorative text */}
             <div className='p-2 text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] group font-bold text-center md:w-10/12 mx-auto flex items-center justify-center flex-wrap gap-x-5 lg:gap-y-2'>
                     <p className=' group-hover:opacity-50  duration-300'>FIGMA'S</p> 
                     <img alt='homeDecoration' src='https://store.figma.com/cdn/shop/t/12/assets/word-symbol-burst.static.svg?v=34745811441670751621705692308' /> 
@@ -28,6 +29,7 @@ const Shop = () => {
                     
             </div>
 
+            {/* figma preorder section */}
             <div className=' relative'>
                     <div className=' md:hidden'>
                         <img alt='homeDecoration' className=' object-cover w-full h-full' src='https://store.figma.com/cdn/shop/files/mobile_200x.png?v=1702333716' />

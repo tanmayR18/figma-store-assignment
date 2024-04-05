@@ -15,18 +15,19 @@ const Navbar = () => {
     const [showDropDown, setShowDropDown] = useState(false)
 
     useEffect(() => {
+        
+        // For checking  scrolling  on window scroll event.
         function onScroll() {
-        let currentPosition = window.pageYOffset;
-        if (currentPosition > scrollTop) {
-            setScrolling(false);
-        } else {
-            setScrolling(true);
-        }
-        setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+            let currentPosition = window.pageYOffset;
+            if (currentPosition > scrollTop) {
+                setScrolling(false);
+            } else {
+                setScrolling(true);
+            }
+            setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
         }
 
         if( scrolling || showDropDown ) setShowDropDown(false)
-
         window.addEventListener("scroll", onScroll);
 
         return () => window.removeEventListener("scroll", onScroll);
@@ -39,6 +40,8 @@ const Navbar = () => {
 
     `}>
         <div className=' p-2 md:p-0 sm:w-[90%] mx-auto  justify-between items-center flex'>
+
+            {/* Links and Hamburgur btn */}
             <div className=' flex gap-2'>
                 <a 
                 className='hidden lg:block font-bold border-2 border-black px-6 py-2 rounded-3xl duration-300 hover:bg-black hover:text-white'
@@ -99,11 +102,13 @@ const Navbar = () => {
                 </div>
             </div>
 
+            {/* Company Name */}
             <Link
             to={"/"} className=' font-bold text-lg md:text-2xl'>
                 THE FIGMA STORE
             </Link>
 
+            {/* DropDown and Cart */}
             <div className=' flex gap-2 items-center'>   
                 
                 <select className=' hidden lg:flex bg-black text-white focus:outline-none focus:border-none rounded-3xl py-3 px-6 cursor-pointer'>
